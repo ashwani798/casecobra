@@ -1,0 +1,12 @@
+<!-- myapp/templates/faq.html -->
+<h1>Frequently Asked Questions</h1>
+<ul>
+    {% for faq in faqs %}
+        <li>
+            <strong>{{ faq.get_translated_question(language_code) }}</strong>
+            <div>
+                {{ faq.get_translated_answer(language_code)|safe }}
+            </div>
+        </li>
+    {% endfor %}
+</ul>
